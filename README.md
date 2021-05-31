@@ -4,5 +4,5 @@ Users can also search their task(s) from a list of tasks becuase the app has a f
 Local Storage object in JavaScript is also used to save tasks of users even if they reload the site or 
 close the tab and then come back later.
 
-##URL
+## URL
 [Todo-List]( https://todolist-app-kunal.netlify.app/ )
