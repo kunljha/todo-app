@@ -6,12 +6,18 @@
 	padding: 0;
 }
 
+:root {
+	--header-color: #ee6c4d;
+	--actions-color: #3d5a80;
+	--primary-color: #293241;
+}
+
 html {
 	font-size: 62.5%;
 }
 
 body {
-	background: #293241;
+	background: var(--primary-color);
 	color: white;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
@@ -22,7 +28,7 @@ button {
 }
 
 a {
-	color: #ee6c4d;
+	color: var(--header-color);
 }
 
 /* Container */
@@ -36,7 +42,7 @@ a {
 /* Header */
 
 .header {
-	background: #ee6c4d;
+	background: var(--header-color);
 	color: #213753;
 	padding: 1.6rem 0;
 }
@@ -54,22 +60,19 @@ a {
 /* Actions Bar */
 
 .actions {
-	background-color: #3d5a80;
+	background-color: var(--actions-color);
 	border: 1px 0 #293241;
 	padding: 1rem;
 }
 
 .actions__container {
-	align-items: center;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	max-width: 60rem;
 	margin: 0 auto;
 	min-height: 3rem;
 	padding: 0 1.6rem;
-}
-
-.actions__container--spaced {
-	justify-content: space-between;
 }
 
 /* Form Inputs */
@@ -93,7 +96,7 @@ a {
 }
 
 .button {
-	background: #ee6c4d;
+	background: var(--header-color);
 	border: none;
 	color: white;
 	font-size: 1.4rem;
@@ -148,7 +151,7 @@ a {
 	text-decoration: none;
 	color: #fafafa;
 	cursor: pointer;
-	background: #3d5a80;
+	background: var(--actions-color);
 	border: 1px solid #003566;
 	margin: 1.6rem 0;
 	padding: 1rem 1.6rem;
