@@ -27,8 +27,12 @@ button {
 	cursor: pointer;
 }
 
-a {
-	color: var(--header-color);
+/* Header */
+
+.header {
+	background: var(--header-color);
+	color: #213753;
+	padding: 1.6rem 0;
 }
 
 /* Container */
@@ -37,14 +41,6 @@ a {
 	max-width: 60rem;
 	margin: 0 auto;
 	padding: 0 1.6rem;
-}
-
-/* Header */
-
-.header {
-	background: var(--header-color);
-	color: #213753;
-	padding: 1.6rem 0;
 }
 
 .header__title {
@@ -62,7 +58,7 @@ a {
 .actions {
 	background-color: var(--actions-color);
 	border: 1px 0 #293241;
-	padding: 1rem;
+	padding: 1.6rem 0;
 }
 
 .actions__container {
@@ -71,8 +67,8 @@ a {
 	justify-content: space-between;
 	max-width: 60rem;
 	margin: 0 auto;
-	min-height: 3rem;
 	padding: 0 1.6rem;
+	min-height: 3rem;
 }
 
 /* Form Inputs */
@@ -95,57 +91,7 @@ a {
 	margin-right: 0.4rem;
 }
 
-.button {
-	background: var(--header-color);
-	border: none;
-	color: white;
-	font-size: 1.4rem;
-	font-weight: 300;
-	padding: 0.8rem;
-	transition: background 0.3s ease, color 0.3s ease;
-}
-
-.button:hover {
-	background: #ea481f;
-}
-
-.button--text {
-	background: none;
-	border: none;
-	color: white;
-}
-
-.button--text:hover {
-	background: none;
-	color: #b2bfd6;
-	text-decoration: underline;
-}
-
-/* Note editor */
-
-.title-input {
-	border: 1px solid #dedfe0;
-	font-size: 2rem;
-	font-weight: 300;
-	display: block;
-	margin: 2.4rem 0;
-	padding: 0.8rem;
-	width: 100%;
-}
-
-.body-input {
-	border: 1px solid #dedfe0;
-	font-family: inherit;
-	font-size: 1.6rem;
-	font-weight: 300;
-	display: block;
-	margin: 2.4rem 0;
-	min-height: 15rem;
-	padding: 0.8rem;
-	width: 100%;
-}
-
-/* Note List Item */
+/* Todos Item */
 
 .list-item {
 	text-decoration: none;
@@ -177,22 +123,37 @@ a {
 	background: #354e6e;
 }
 
-.list-item__title {
-	font-size: 1.8rem;
-	margin-bottom: 0.4rem;
-}
-
-.list-item__subtitle {
-	color: #666;
-	font-size: 1.4rem;
-	font-weight: 300;
-	font-style: italic;
-}
-
-.list-title {
-	margin: 3.2rem 0 1.6rem;
+.list-message {
+	margin: 1.6rem 0;
 }
 
 .empty-message {
 	margin: 3.2rem 0;
+}
+
+/* button */
+.button {
+	background: var(--header-color);
+	border: none;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 300;
+	padding: 0.8rem;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+	background: #ea481f;
+}
+
+.button--text {
+	background: none;
+	border: none;
+	color: white;
+}
+
+.button--text:hover {
+	background: none;
+	color: #b2bfd6;
+	text-decoration: underline;
 }
