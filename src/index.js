@@ -30,7 +30,7 @@ document.querySelector('#add-todo').addEventListener('submit', (e) => {
 	e.target.elements.addTodo.value = ''
 })
 
-window.addEventListerner('storage', (e) => {
+window.addEventListener('storage', (e) => {
 	if (e.key === 'todos') {
 		renderTodos()
 	}
