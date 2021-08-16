@@ -8,7 +8,7 @@ const filters = {
 const getFilters = () => filters
 
 // setFilters
-// Arguments: updates object with optional searchText or hideCompleted
+// Arguments: updates object with optional searchText or isChecked properties
 // Return value: none
 const setFilters = (updates) => {
 	if (typeof updates.searchText === 'string') {

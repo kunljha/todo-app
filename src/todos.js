@@ -1,4 +1,5 @@
-// Setup the empty todos array
+import uuidv4 from 'uuid/v4'
+
 let todos = []
 
 // loadTodos
@@ -14,7 +15,7 @@ const loadTodos = () => {
 	}
 }
 
-// saveTodos, adding/updating todos in localStorage
+// adding/updating todos in localStorage
 const saveTodos = () => {
 	localStorage.setItem('todos', JSON.stringify(todos))
 }
@@ -23,7 +24,7 @@ const saveTodos = () => {
 const getTodos = () => todos
 
 // createTodo
-const createTodo = (text) => {
+const createTodo = (todoText) => {
 	if (todoText.length > 0) {
 		todos.push({
 			id: uuidv4(),
@@ -31,7 +32,7 @@ const createTodo = (text) => {
 			isCompleted: false,
 		})
 
-		saveTodos(todos) // adding new todos in localStorage
+		saveTodos() // adding new todos in localStorage
 	}
 }
 
@@ -42,7 +43,7 @@ const removeTodo = (id) => {
 	if (todoIndex > -1) {
 		todos.splice(todoIndex, 1)
 	}
-	saveTodos()
+	saveTodos() // removing todo from localStorage
 }
 
 // toggleTodo
@@ -54,7 +55,6 @@ const toggleTodo = (id) => {
 	}
 }
 
-// Make sure to call loadTodos and setup the exports
 todos = loadTodos()
 
 export { saveTodos, getTodos, createTodo, removeTodo, toggleTodo }

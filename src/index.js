@@ -1,16 +1,37 @@
-// Set up index.html to load the bundle
-// Make sure to load uuid via an npm module when necessary
-
-// --
-
-// Add necessary imports
+import { renderTodos } from './views'
+import { setFilters } from './filters'
+import { createTodo } from './todos'
 
 // Render initial todos
+renderTodos()
 
-// Set up search text handler
+// event-listener for filtering todos
+document.querySelector('#filter-todo').addEventListener('input', (e) => {
+	setFilters({
+		searchText: e.target.value,
+	})
+	renderTodos()
+})
 
-// Set up checkbox handler
+// event-listener to show incomplete todos
+document.querySelector('#tasks-left').addEventListener('change', (e) => {
+	setFilters({
+		isChecked: e.target.checked,
+	})
+	renderTodos()
+})
 
-// Set up form submission handler
+// event-listener for adding todos
+document.querySelector('#add-todo').addEventListener('submit', (e) => {
+	e.preventDefault() // prevents default actions of submit event, like page reload
+	const todoText = e.target.elements.addTodo.value.trim()
+	createTodo(todoText)
+	renderTodos()
+	e.target.elements.addTodo.value = ''
+})
 
-// Bonus: Add a watcher for local storage
+window.addEventListerner('storage', (e) => {
+	if (e.key === 'todos') {
+		renderTodos()
+	}
+})
