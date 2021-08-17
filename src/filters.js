@@ -10,13 +10,13 @@ const getFilters = () => filters
 // setFilters
 // Arguments: updates object with optional searchText or isChecked properties
 // Return value: none
-const setFilters = (updates) => {
-	if (typeof updates.searchText === 'string') {
-		filters.searchText = updates.searchText
+const setFilters = ({ searchText, isChecked }) => {
+	if (typeof searchText === 'string') {
+		filters.searchText = searchText
 	}
 
-	if (typeof updates.isChecked === 'boolean') {
-		filters.isChecked = updates.isChecked
+	if (typeof isChecked === 'boolean') {
+		filters.isChecked = isChecked
 	}
 }
 

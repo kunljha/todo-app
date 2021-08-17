@@ -5,14 +5,14 @@ import { getFilters } from './filters'
 const renderTodos = () => {
 	const todoEl = document.querySelector('#todos')
 	const todos = getTodos()
-	const filters = getFilters()
+	const { searchText, isChecked } = getFilters()
 
 	// filtering todos
 	const filteredTodos = todos.filter((todo) => {
 		const searchTodo = todo.task
 			.toLowerCase()
-			.includes(filters.searchText.toLowerCase())
-		const checkboxTodo = !filters.isChecked || !todo.completed
+			.includes(searchText.toLowerCase())
+		const checkboxTodo = !isChecked || !todo.completed
 		return searchTodo && checkboxTodo
 	})
 
